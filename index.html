@@ -5,11 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cochabamba</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"/>
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"/>
     <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
     <style>
         h1{
             font-family: 'Alkalami';
@@ -21,11 +23,11 @@
             bottom:10%;
             left: 400px;
             right: 0;
+            
         }
-
     </style>    
     <h1>Mapa de Cochabamba</h1>
-    <select name="select-ubication" id="selected" ;>
+    <select name="select-ubication" id="select-ubication">
         <option value="-1">Seleccione que sitio desea ver</option>
         <option value="-17.388284768889573, -66.15575781575984">Marcador con informacion en burbuja Plaza Colon</option>
         <option value="-17.393782,-66.156986">Poligono Plaza Principal</option>
@@ -33,10 +35,14 @@
     </select>
 </head>
 <body>
+    
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v15.0" nonce="5iklaJef"></script>
-
-    <div id="map"></div>
+    <div class="container-sm border">
+        <div id="map">
+            
+        </div>
+    </div>
     <script type="text/javascript">
 
         document.getElementById('select-ubication').addEventListener('change', function(e){
@@ -114,6 +120,6 @@
 
 
     </script>
-<div class="fb-comments" data-href="https://chambi001.github.io/PaginaWebGmaps/" data-width="400" data-numposts="5" top="700"></div>
+    <div class="fb-comments" data-href="https://chambi001.github.io/PaginaWebGmaps/" data-width="400" data-numposts="5"></div>
 </body>
 </html>
